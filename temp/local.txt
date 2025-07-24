@@ -1,0 +1,3 @@
+plan:
+
+1. translate the global.css file to the new one
