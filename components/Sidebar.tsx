@@ -42,7 +42,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
               <li
                 className={cn(
                   'flex text-light-100 gap-4 rounded-xl lg:w-full justify-center lg:justify-start items-center h5 lg:px-[30px] h-[52px] lg:rounded-full !important',
-                  pathname === url && 'shad-active'
+                  pathname === url && 'bg-brand text-white shadow-drop-2 '
                 )}
               >
                 <Image
@@ -76,7 +76,7 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
           alt="Avatar"
           width={44}
           height={44}
-          className="aspect-square w-10 rounded-full object-cover"
+          className="sidebar-user-avatar"
         />
         <div className="hidden lg:block">
           <p className="text-[14px] leading-[20px] font-semibold capitalize">
