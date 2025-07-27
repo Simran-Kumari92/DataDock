@@ -41,7 +41,7 @@ const Page = async ({ searchParams, params }: SearchParamProps) => {
           ))}
         </section>
       ) : (
-        <p className="body-1 mt-10 text-center text-light-200">
+        <p className=" text-[16px] leading-[24px] font-normal mt-10 text-center text-light-200">
           No files uploaded
         </p>
       )}
