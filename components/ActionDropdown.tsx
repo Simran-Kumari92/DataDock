@@ -26,6 +26,7 @@ import { Models } from 'node-appwrite';
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
+import { FileDetails } from './ActionsModalContent';
 
 const ActionDropdown = ({ file }: { file: Models.Document }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -81,6 +82,7 @@ const ActionDropdown = ({ file }: { file: Models.Document }) => {
               onChange={(e) => setName(e.target.value)}
             />
           )}
+          {value && 'details' && <FileDetails file={file} />}
         </DialogHeader>
         {['rename', 'delete', 'share'].includes(value) && (
           <DialogFooter className="flex flex-col gap-3 md:flex-row">
