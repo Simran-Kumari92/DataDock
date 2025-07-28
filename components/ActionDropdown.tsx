@@ -17,17 +17,16 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { actionsDropdownItems } from '@/constants';
-import { renameFile, updateFileUsers } from '@/lib/actions/file.actions';
+import { deleteFile, renameFile, updateFileUsers } from '@/lib/actions/file.actions';
 import { constructDownloadUrl } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Models } from 'node-appwrite';
 import { useState } from 'react';
-import { FileDetails, ShareInput} from './ActionsModalContent';
+import { FileDetails, ShareInput } from './ActionsModalContent';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
-
 
 const ActionDropdown = ({ file }: { file: Models.Document }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -56,7 +55,8 @@ const ActionDropdown = ({ file }: { file: Models.Document }) => {
       rename: () =>
         renameFile({ fileId: file.$id, name, extension: file.extension, path }),
       share: () => updateFileUsers({ fileId: file.$id, emails, path }),
-      delete: () => console.log('delete'),
+      delete: () =>
+        deleteFile({ fileId: file.$id, bucketFileId: file.bucketFileId, path }),
     };
 
     success = await actions[action.value as keyof typeof actions]();
@@ -66,7 +66,7 @@ const ActionDropdown = ({ file }: { file: Models.Document }) => {
     setIsLoading(false);
   };
 
-const handleRemoveUser = async (email: string) => {
+  const handleRemoveUser = async (email: string) => {
     const updatedEmails = emails.filter((e) => e !== email);
 
     const success = await updateFileUsers({
@@ -104,6 +104,12 @@ const handleRemoveUser = async (email: string) => {
               onInputChange={setEmails}
               onRemove={handleRemoveUser}
             />
+          )}
+          {value === 'delete' && (
+            <p className="text-center text-light-100">
+              Are you sure you want to delete{` `}
+              <span className="font-medium text-brand-100 ">{file.name}</span>?
+            </p>
           )}
         </DialogHeader>
         {['rename', 'delete', 'share'].includes(value) && (
