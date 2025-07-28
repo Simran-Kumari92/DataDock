@@ -126,14 +126,34 @@ export const renameFile = async ({
         name: newName,
       },
     );
-    
-    console.log("Revalidating path:", path);
-console.log("Type of path:", typeof path);
-
-
+     
     revalidatePath(path);
     return parseStringify(updatedFile);
   } catch (error) {
     handleError(error, "Failed to rename file");
   }
 };
+
+export const updateFileUsers = async ({
+  fileId,
+  emails,
+  path,
+}: UpdateFileUsersProps) => {
+  const { databases } = await createAdminClient();
+
+  try {
+    const updatedFile = await databases.updateDocument(
+      appwriteConfig.databaseId,
+      appwriteConfig.filesCollectionId,
+      fileId,
+      {
+        users: emails,
+      },
+    );
+
+    revalidatePath(path);
+    return parseStringify(updatedFile);
+  } catch (error) {
+    handleError(error, "Failed to rename file");
+  }
+}
