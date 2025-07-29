@@ -68,7 +68,7 @@ const FileUploader = ({ ownerId, accountId, className }: Props) => {
   return (
     <div {...getRootProps()} className="cursor-pointer">
       <input {...getInputProps()} />
-      <Button type="button" className={cn('flex items-center justify-center gap-2 rounded-full bg-[#F87171] px-10 h-[52px] shadow-lg text-white font-medium hover:bg-[#ff8787] transition-all', className)}>
+      <Button type="button" className={cn('flex items-center justify-center gap-2 rounded-full bg-[#FF6B6B] px-10 h-[52px] shadow-lg text-white font-medium hover:bg-[#ff8787] transition-all', className)}>
         <Image
           src="/assets/icons/upload.svg"
           alt="upload"

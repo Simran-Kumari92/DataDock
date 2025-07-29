@@ -19,11 +19,11 @@ const Sidebar = ({ fullName, avatar, email }: Props) => {
     <aside className="remove-scrollbar hidden h-screen w-[90px] flex-col overflow-auto px-5 py-7 sm:flex lg:w-[280px] xl:w-[325px] !important">
       <Link href="/">
         <Image
-          src="/assets/icons/logo-full-brand.svg"
+          src="/assets/icons/logo-full-brand.png"
           alt="logo"
           width={160}
-          height={50}
-          className="hidden h-auto lg:block"
+          height={70}
+          className="hidden h-auto lg:block ml-8"
         />
 
         <Image

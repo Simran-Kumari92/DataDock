@@ -4,26 +4,16 @@
 
 <!-- Badges -->
 <p>
-  <img src="https://img.shields.io/badge/react-19-blue" />
-  <img src="https://img.shields.io/badge/next.js-15-black" />
-  <img src="https://img.shields.io/badge/typescript-%E2%9C%93-3178c6" />
+  <img src="https://camo.githubusercontent.com/d5419d45bd40bcd99f97e53993e1b56e0542fdd4d444974c59b5b5178a451545/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4e6578745f4a532d626c61636b3f7374796c653d666f722d7468652d6261646765266c6f676f436f6c6f723d7768697465266c6f676f3d6e657874646f746a7326636f6c6f723d303030303030" />
+  <img src="https://camo.githubusercontent.com/4318b1b43422f3e2df0cee9da235b3680f08bddaa4f73fab85fc1c5c9f8b60fa/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d547970655363726970742d626c61636b3f7374796c653d666f722d7468652d6261646765266c6f676f436f6c6f723d7768697465266c6f676f3d7479706573637269707426636f6c6f723d333137384336" />
+  <img src="https://camo.githubusercontent.com/93bafe03a143d759a2983be7cd132f70a6a186233ca455f08f3f198adb3d2381/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d5461696c77696e645f4353532d626c61636b3f7374796c653d666f722d7468652d6261646765266c6f676f436f6c6f723d7768697465266c6f676f3d7461696c77696e6463737326636f6c6f723d303642364434" />
+  <img src="https://camo.githubusercontent.com/4cbcc5434676759b67404424204b1f9d8932bad550d3e12921e34a2c874a82f1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d41707077726974652d626c61636b3f7374796c653d666f722d7468652d6261646765266c6f676f436f6c6f723d7768697465266c6f676f3d617070777269746526636f6c6f723d464433363645" />
 </p>
 
 <!-- Screenshot -->
 <img src="/assets/icons/ui.png" alt="Datadock UI Screenshot" width="80%" />
 
 </div>
-
----
-
-## 📚 Table of Contents
-
-- [Introduction](#introduction)
-- [Tech Stack](#tech-stack)
-- [Key Features](#key-features)
-- [Screenshots](#screenshots)
-- [Quick Start](#quick-start)
-- [License](#license)
 
 ---
 
@@ -76,5 +66,4 @@ All wrapped in a minimal and user-friendly interface.
 
 ---
 
-> ✅ *This project was developed for placement preparation purposes to showcase my understanding of modern full-stack web development.*
 
