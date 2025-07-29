@@ -11,7 +11,7 @@
 </p>
 
 <!-- Screenshot -->
-<img src="/assets/icons/ui.png" alt="Datadock UI Screenshot" width="80%" />
+<img src="https://raw.githubusercontent.com/Simran-Kumari92/DataDock/main/public/assets/icons/ui.png" alt="Datadock UI Screenshot" width="80%" />
 
 </div>
 
